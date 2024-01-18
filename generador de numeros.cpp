@@ -1,23 +1,31 @@
-#include <iostream>
-#include <cstdlib> // se necesita para la funci髇 rand()
-#include <ctime>   // se necesita para la funci髇 time()
+/*
+Titulo: Generador de numeros aleatorios 
+Autor: Carlos eduardo cabello cabello
+Descripcion: Escribir un programa que imprima numeros aleatorios entre 0 - 99, donde "N" sea ingresado por el usuario. 
+Fecha: 17/01/2024
 
-// Utilizamos el espacio de nombres std para evitar la repetici髇 de std::
+*/
+
+#include <iostream>
+#include <cstdlib> // se necesita para la funci贸n rand()
+#include <ctime>   // se necesita para la funci贸n time()
+
+// Utilizamos el espacio de nombres std para evitar la repetici贸n de std::
 using namespace std;
 
 int main() {
 	int cantidad;
 	
 	// se solicita al usuario ingresar que cantidad de numeros quiere generar.
-	cout << "Ejercicio 2: Generaci髇 de NUmeros Aleatorios\n";
-	cout << "緾u醤tos n鷐eros quiere generar? ";
+	cout << "Ejercicio 2: Generaci贸n de NUmeros Aleatorios\n";
+	cout << "驴Cu谩ntos n煤meros quiere generar? ";
 	cin >> cantidad;
 	
-	// Iniciar la semilla para obtener n鷐eros realmente aleatorios
+	// Iniciar la semilla para obtener n煤meros realmente aleatorios
 	srand(time(0));
 	
 	// imprimir los numeros aleatorios que se generaron
-	cout << "N鷐eros aleatorios generados: ";
+	cout << "N煤meros aleatorios generados: ";
 	for (int i = 0; i < cantidad; ++i) {
 		// generar numeros aleatorios y mostrarlos
 		cout << rand() % 100;
